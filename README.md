@@ -7,13 +7,13 @@ v1 is **in-memory only**: state lives in RAM for the process lifetime.
 ## Install
 
 ```bash
-npm install flowrun
+npm install @mofax/flowrun
 ```
 
 ## Quick start
 
 ```ts
-import flowrun from "flowrun";
+import flowrun from "@mofax/flowrun";
 
 const workflow = flowrun.registerWorkflow("hello-world", async (config) => {
 	const args = config.args;
@@ -137,7 +137,7 @@ import {
 	linearBackoff,
 	exponentialBackoff,
 	exponentialFullJitterBackoff, // default
-} from "flowrun";
+} from "@mofax/flowrun";
 
 await workflow.run(
 	{ args: [] },

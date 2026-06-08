@@ -1,5 +1,5 @@
 {
-	"name": "flowrun",
+	"name": "@mofax/flowrun",
 	"version": "0.0.0",
 	"description": "A durable execution engine for TypeScript — author workflows as async functions with memoized, replayable steps.",
 	"keywords": [

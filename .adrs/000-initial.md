@@ -14,7 +14,7 @@ engine guarantee that already-completed steps are never re-executed when a workf
 retried. The target public API is:
 
 ```ts
-import flowrun from "flowrun";
+import flowrun from "@mofax/flowrun";
 
 const workflow = flowrun.registerWorkflow("hello-world", async (config) => {
 	const args = config.args;
