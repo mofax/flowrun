@@ -1,0 +1,60 @@
+{
+	"name": "flowrun",
+	"version": "0.0.0",
+	"description": "A durable execution engine for TypeScript — author workflows as async functions with memoized, replayable steps.",
+	"keywords": [
+		"durable-execution",
+		"orchestration",
+		"retry",
+		"saga",
+		"steps",
+		"typescript",
+		"workflow"
+	],
+	"homepage": "https://github.com/mofax/flowrun#readme",
+	"bugs": {
+		"url": "https://github.com/mofax/flowrun/issues"
+	},
+	"license": "MIT",
+	"author": "Alloys Mila <mofax@users.noreply.github.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mofax/flowrun.git"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": "./dist/index.mjs",
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "vp pack",
+		"dev": "vp pack --watch",
+		"test": "vp test",
+		"check": "vp check",
+		"prepublishOnly": "vp run check && vp run build",
+		"release": "bumpp"
+	},
+	"devDependencies": {
+		"@types/node": "^25.6.2",
+		"@typescript/native-preview": "7.0.0-dev.20260509.2",
+		"bumpp": "^11.1.0",
+		"typescript": "^6.0.3",
+		"vite-plus": "^0.1.20"
+	},
+	"overrides": {
+		"vite": "npm:@voidzero-dev/vite-plus-core@latest",
+		"vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.3.14"
+}
